@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h3 class="text-center display-4">Post an Item</h3>
+        <form>
+            <div class="form-group">
+              <label for="postingTitle">Posting Title</label>
+              <input type="text" name="postingTitle" class="form-control" id="postingTitle" aria-describedby="emailHelp">              
+            </div>
+            <div class="form-group">
+                <label for="selectCategory">Category</label>
+                <select class="form-control" id="selectCategory">
+                    <option selected>Select an option</option>
+                    <option>Household</option>
+                    <option>Baby</option>
+                    <option>Musical</option>
+                    <option>Clothing</option>
+                    <option>5Travel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="desc">Example textarea</label>
+                <textarea class="form-control" id="desc" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link font-weight-bold active" id="rent-tab" data-toggle="tab" href="#rent" role="tab" aria-controls="rent" aria-selected="true">Rental Pricing</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link font-weight-bold" id="buy-tab" data-toggle="tab" href="#buy" role="tab" aria-controls="buy" aria-selected="false">Purchase Pricing</a>
+                </li>                  
+            </ul>
+            <div class="tab-content border border-top-0 p-4" id="myTabContent">
+                <div class="tab-pane fade show active" id="rent" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="custom-control custom-switch pb-4">
+                        <input type="checkbox" class="custom-control-input" id="rentalSwitch" name="pricingSwitches" checked>
+                        <label class="custom-control-label" for="rentalSwitch">Enable item for rental</label>
+                    </div>
+                    <div id="rentalPriceSection" class="d-block">
+                        <p class="font-weight-bold">Rental Price ($) Per:</p>
+                        <div class="form-row pb-4">
+                            <div class="form-group col-md-4">
+                            <label for="enterDay">Day</label>
+                            <input type="text" class="form-control" id="enterDay" placeholder="Enter price per day">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="enterWeek">Week</label>
+                                <input type="text" class="form-control" id="enterWeek" placeholder="Enter price per week">
+                            </div>
+                            <div class="form-group col-md-4">
+                            <label for="enterMonth">Month</label>
+                            <input type="text" class="form-control" id="enterMonth" placeholder="Enter price per month">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="enterValue">Item Value ($)</label>
+                                <input type="text" class="form-control" id="enterValue">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="enterQuantity">Quantity</label>
+                                <input type="text" class="form-control" id="enterQuantity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="enterMin">Minimum Rental Days</label>
+                                <input type="text" class="form-control" id="enterMin">
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="buy" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="custom-control custom-switch pb-4">
+                        <input type="checkbox" class="custom-control-input" id="buySwitch" name="pricingSwitches">
+                        <label class="custom-control-label" for="buySwitch">Enable item for purchase</label>
+                    </div>
+                    <div id="buyPriceSection" class="d-none">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="itemPrice">Item One-time Purchase Price($)</label>
+                                <input type="text" class="form-control" id="itemPrice">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="itemQuantity">Quantity</label>
+                                <input type="text" class="form-control" id="itemQuantity">
+                            </div>      
+                        </div>       
+                    </div>
+                </div>
+            </div>
+            <div class="form-row justify-content-center my-5">
+                <button type="submit" class="btn btn-grad btn-lg text-white rounded-pill px-5 py-3">Submit</button>
+            </div>            
+          </form>
+
+    </div>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
