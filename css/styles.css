@@ -89,7 +89,7 @@ header h3 {
 
 
 footer {
-    background-color: #FBB03A;
+    /* background-color: #FBB03A; */
     padding: 20px 0;
     color: #9340FF
 }
@@ -99,7 +99,7 @@ footer {
     min-height: 200px;
 }
 .navbar {
-    background-color: #FBB03A;
+    background-color: #9340FF;
     transition: top .6s;
     /*padding-bottom: 45px;*/
 }
