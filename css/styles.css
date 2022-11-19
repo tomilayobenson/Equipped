@@ -156,3 +156,29 @@ h1,h2,h3,h4,h5,h6 {
       border-radius:25px;
     }
     /*End Sarah unorganized styles*/
+header h3 {
+    
+    color: #9340FF;
+}
+
+
+
+footer {
+    /* background-color: #FBB03A; */
+    padding: 20px 0;
+    color: #9340FF
+}
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+.navbar {
+    background-color: #9340FF;
+    transition: top .6s;
+    /*padding-bottom: 45px;*/
+}
+.loginModal {
+    background-color: #9340FF;
+}
+
