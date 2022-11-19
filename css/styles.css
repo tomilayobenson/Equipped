@@ -91,16 +91,7 @@ h1,h2,h3,h4,h5,h6 {
     width:fit-content;
   }
   
-  .site-footer {
-    background-color:black;
-    color:white;
-    padding: 20px 0; }
-  
-  body{
-    margin-bottom:1000px;
-  
-  }
-  
+
   .doona-scroll-images{
     height:7rem;
     width:10rem;
